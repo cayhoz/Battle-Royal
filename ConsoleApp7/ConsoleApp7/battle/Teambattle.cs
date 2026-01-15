@@ -156,13 +156,13 @@
         if (aoeDamage == 0)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine($"\n⏸️ {mage.Name} doesn't have enough mana for area attack!");
+            Console.WriteLine($"\n {mage.Name} doesn't have enough mana for area attack!");
             Console.ResetColor();
         }
         else
         {
             Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine($"\n💥🔮 {mage.Name} casts area spell!");
+            Console.WriteLine($"\n {mage.Name} casts area spell!");
             Console.ResetColor();
 
             foreach (var target in targets)
@@ -178,7 +178,7 @@
                 if (aoeDamage > 0 && actualDamage == 0)
                 {
                     Console.ForegroundColor = ConsoleColor.Cyan;
-                    Console.WriteLine($"      💨 {target.Name} dodged!");
+                    Console.WriteLine($"       {target.Name} dodged!");
                     Console.ResetColor();
                 }
 
@@ -203,7 +203,7 @@
         if (damage == 0)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine($"\n⏸️ {attacker.Name} skips turn!");
+            Console.WriteLine($"\n {attacker.Name} skips turn!");
             Console.ResetColor();
         }
         else
@@ -213,21 +213,21 @@
             int actualDamage = healthBefore - defender.Health;
 
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"\n💥 {attacker.Name} → {defender.Name}");
+            Console.WriteLine($"\n {attacker.Name} → {defender.Name}");
             Console.WriteLine($"   Damage: {damage} → Received: {actualDamage}");
             Console.ResetColor();
 
             if (damage > 0 && actualDamage == 0)
             {
                 Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine($"   💨 {defender.Name} dodged!");
+                Console.WriteLine($"    {defender.Name} dodged!");
                 Console.ResetColor();
             }
 
             if (!defender.IsAlive)
             {
                 Console.ForegroundColor = ConsoleColor.DarkRed;
-                Console.WriteLine($"   💀 {defender.Name} defeated!");
+                Console.WriteLine($"    {defender.Name} defeated!");
                 Console.ResetColor();
             }
             else
