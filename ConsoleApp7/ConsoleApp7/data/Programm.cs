@@ -9,7 +9,7 @@
         if (!Login())
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("\n❌ Access denied!");
+            Console.WriteLine("\nX Access denied!");
             Console.ResetColor();
             Thread.Sleep(2000);
             return;
