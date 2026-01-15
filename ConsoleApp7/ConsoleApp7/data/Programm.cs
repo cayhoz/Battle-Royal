@@ -18,7 +18,7 @@
         Console.Clear();
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("\n╔═══════════════════════════════════════════════╗");
-        Console.WriteLine("║     ⚔️  TEAM BATTLE SYSTEM  ⚔️               ║");
+        Console.WriteLine("║        TEAM BATTLE SYSTEM                  ║");
         Console.WriteLine("╚═══════════════════════════════════════════════╝\n");
         Console.ResetColor();
 
@@ -115,7 +115,7 @@
             if (attempts > 0)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine($"\n❌ Wrong password!  Attempts left: {attempts}\n");
+                Console.WriteLine($"\nХ Wrong password!  Attempts left: {attempts}\n");
                 Console.ResetColor();
             }
         }
@@ -209,7 +209,7 @@
         if (isSelected)
         {
             Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.WriteLine($"  [{number}] {name} - {description} ❌ ALREADY SELECTED");
+            Console.WriteLine($"  [{number}] {name} - {description} Х ALREADY SELECTED");
             Console.ResetColor();
         }
         else
@@ -240,7 +240,7 @@
                     if (selectedType != null && selectedTypes.Contains(selectedType))
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("❌ This class already selected!  Choose another.");
+                        Console.WriteLine("Х This class already selected!  Choose another.");
                         Console.ResetColor();
                         continue;
                     }
